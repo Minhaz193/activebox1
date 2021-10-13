@@ -1,0 +1,639 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    vertical-align: middle;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+@font-face{
+    font-family:'minhaz';
+    src:url(../opensans/OpenSans-Regular.ttf);
+}
+
+@font-face{
+    font-family:'minhaz1';
+    src:url(../opensans/OpenSans-ExtraBold.ttf);
+}
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+:root{
+    --brandcolor:#e84545;
+    --brandoverlay:rgb(232, 69, 69,.9);
+    --bgovrlay:rgb(43, 46, 74,.9);
+    --colortext:#ffffff;
+    --columcolorh:#2d3033;
+    --columcolorp:#6c7279;
+    --transition:all linear .2s;
+}
+.brand-color{
+    color:#e84545;
+}
+.col-color{
+    color:#6c7279;
+}
+
+.h-color{
+   color: #2d3033;
+}
+
+.text-white{
+    color:#ffffff; 
+}
+.end-col{
+    color: #808080;
+}
+
+.end-col2{
+    color: #b3b3bc;
+}
+
+.ttu{
+    text-transform: uppercase;
+}
+
+.ttc{
+    text-transform: capitalize;
+}
+
+.text-align{
+    text-align: center;
+}
+
+.fs-14{
+    font-size: 14px;
+}
+
+.fs-13{
+    font-size: 13px;
+}
+
+.fs-22{
+    font-size: 22px;
+}
+
+.fs-28{
+    font-size: 28px;
+}
+
+.fs-65{
+    font-size: 65px;
+}
+
+.cta-btn{
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: minhaz;
+    font-size: 14px;
+    background-color: var(--brandcolor);
+    line-height: 46px;
+}
+.pos-rel{
+    position: relative;
+}
+.pos-ab{
+    position: absolute;
+}
+.top-0{
+    top: 0;
+}
+
+.left-0{
+    left: 0;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.h-100{
+    height: 100%;
+}
+
+.brand-overlay{
+    background: var(--brandoverlay);
+}
+
+.transition{
+    transition:all linear .2s;
+}
+
+/* common css ends */
+/* menu starts */
+nav{
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+nav .navbar{
+    height: 100px;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .navbar .logo{
+    height: 100px;
+    width: 200px;
+  
+    display: flex;
+    align-items: center;
+}
+
+nav .navbar .logo img{
+    width: 100%;
+}
+
+nav .navbar .menu-list{
+    height: 100px;
+    width: 600px;
+   
+}
+
+nav .navbar .menu-list ul{
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .navbar .menu-list ul li a{
+    font-family: minhaz;
+    color: var(--colortext);
+}
+
+
+/* menu ends */
+/* banner starts */
+#banner{
+    height: 750px;
+    background: url(../images/banner.jpg) no-repeat center / cover;
+    position: relative;
+    z-index: 5;
+}
+
+#banner::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: var(--bgovrlay);
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+#banner .banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 750px;
+}
+
+#banner .banner .cta-btn{
+    padding: 0 55px;
+   
+}
+
+#banner .banner  h2{
+   margin-top: 240px;
+   margin-bottom: 30px;
+   padding: 0 45px;
+   line-height: 71px;
+}
+
+#banner .banner  h3{
+    margin-bottom: 50px;
+    padding: 0 108px;
+    line-height: 33px;
+}
+
+
+/* banner ends */
+
+/* feature starts */
+#feature{
+    height: 450px;
+    margin: 120px 0;
+}
+#feature .feature{
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+#feature .feature .feature-iteam{
+    height: 190px;
+    width: 370px;
+}
+
+#feature .feature .feature-iteam h2{
+    margin-top: 33px;
+    margin-bottom: 20px;
+}
+
+#feature .feature .feature-iteam h3{
+    line-height: 21px;
+    padding: 0 30px;
+}
+
+/* feature ends */
+/* group starts */
+#gallery{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+#gallery .gallery-iteam{
+    width: 25%;
+    font-family: minhaz;
+}
+
+#gallery .gallery-iteam .overlay{
+    opacity: 0;
+    transition:var(--transition);
+}
+
+#gallery .gallery-iteam:hover .overlay{
+    opacity: 1;
+}
+
+#gallery .gallery-iteam .overlay .text h2{
+    margin-top: 100px;
+   
+}
+/* gallery ends */
+/* group starts */
+#group{
+    height: 570px;
+}
+
+#group .group{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#group .group .group-iteam{
+    height: 100%;
+    width: 270px;
+    font-family: minhaz;
+}
+
+#group .group .group-iteam h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#group .group .group-iteam h3{
+    margin-bottom: 25px;
+}
+#group .group .group-iteam p{
+    margin-bottom: 30px;
+}
+
+/* group ends */
+/* bio starts */
+#bio{
+    height: 500px;
+    background: url(../images/bbwall.jpg) no-repeat center / cover;
+    display: flex;
+    margin-top: 100px;
+}
+#bio .bio-pic{
+    height: 100%;
+    width: 50%;
+    background: url(../images/bpic.jpg) no-repeat center / cover;
+}
+
+#bio .bio-text{
+    height: 100%;
+    width: 500px;
+    margin-left: 80px;
+}
+
+#bio .bio-text h2{
+    font-size: 36px;
+    font-family: minhaz;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+#bio .bio-text h3{
+    
+    font-family: minhaz;
+}
+
+#bio .bio-text ul{
+    height: 13px;
+    display: flex;
+    margin-left: 220px;
+    margin-top: 70px;
+}
+
+#bio .bio-text ul li{
+    height: 13px;
+    width: 13px;
+    background-color: grey;
+    border-radius: 50%;
+    margin-left: 9px;
+}
+
+#bio .bio-text ul li:nth-child(2){
+    background-color: white;
+}
+/* bio ends */
+/* download starts */
+#download{
+    height: 340px;
+}
+
+#download .download{
+    height: 100%;
+    font-family: minhaz;
+}
+
+#download .download h2{
+    padding-top: 90px;
+    padding-bottom: 10px;
+}
+#download .download h3{
+    padding-bottom: 35px;
+}
+#download .download a .cta-btn{
+    padding: 0 30px;
+    color: #ffffff;
+}
+/* download ends */
+/* last starts */
+#last{
+    height: 250px;
+    background-color: #3a3e64;
+}
+
+#last .last{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#last .last .box{
+   height: 100%;
+   width: 390px;
+   font-family: minhaz;
+}
+
+#last .last .box h2{
+    padding-top: 70px;
+    color: #b8b9c4;
+    padding-bottom: 15px;
+}
+
+#last .last .box h3{
+    color: #5a5d7a;
+    line-height: 22.5px;
+}
+#last .last .box a ul{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b8b9c4;
+    font-family: minhaz1;
+}
+
+#last .last .box a ul li{
+    width: 40px;
+    height: 40px;
+    border: 3px solid #b8b9c4;
+    box-sizing: border-box;
+    margin-left: 6px;
+}
+
+#last .last .box a ul li:first-of-type{
+    margin-left: 0;
+}
+
+
+/* last ends */
+
+/* end */
+#end{
+    height: 94px;
+    background-color:#313454 ;
+}
+
+#end .end{
+    height: 100%;
+}
+
+#end .end h2{
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+/* cls 17 practice starts */
+#plan{
+    height: 410px;
+    margin: 100px 0;
+}
+#plan .plan{
+    height: 410px;
+    display: flex;
+    justify-content: space-between;
+}
+#plan .plan .plan-iteam{
+    height: 410px;
+    width: 270px;
+    border-radius: 10%;
+    background-color:#f1f1f1;
+    transition: var(--transition);
+   
+}
+#plan .plan .plan-iteam:hover{
+    background-color: #744fa0;
+    color: #ffffff;
+}
+
+#plan .plan .plan-iteam .heading{
+    height: 60px;
+    width: 270px;
+    font-family: minhaz;
+    line-height: 60px;
+}
+
+#plan .plan .plan-iteam .balance{
+    height: 160px;
+    width: 270px;
+    background-color: #ffffff;
+}
+#plan .plan .plan-iteam .balance .circle{
+    height: 120px;
+    width: 120px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    top: 20px;
+    left: 70px;
+    font-family: minhaz1;
+    border: 3px solid #f1f1f1;
+}
+
+#plan .plan .plan-iteam .balance .circle h1{
+    font-size: 47px;
+    color: #5e5e5e;
+    padding-top: 10px;
+}
+.plan .plan-iteam .balance .circle span{
+    font-size: 18px;
+ }
+#plan .plan .plan-iteam .balance .circle p{
+   font-size: 15px;
+   color:#656565;
+}
+
+#plan .plan .plan-iteam .pera{
+    height: 190px;
+    width: 270px;
+    font-size: 15px;
+    font-family: minhaz;
+    position: relative;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    background-color:#f1f1f1;
+}
+
+#plan .plan .plan-iteam:hover .pera{
+    color: black;
+}
+#plan .plan .plan-iteam .pera p:first-child{
+   padding-top: 30px;
+}
+#plan .plan .plan-iteam .pera p{
+    padding-bottom: 10px;
+}
+
+#plan .plan .plan-iteam .pera .btn{
+    position: absolute;
+    top: 170px;
+    left: 70px;
+    transition: var(--transition);
+}
+
+#plan .plan .plan-iteam:hover .pera .btn a{
+    background-color:#744fa0;
+    color: #ffffff;
+}
+
+#plan .plan .plan-iteam .pera .btn a{
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: minhaz;
+    font-size: 14px;
+    line-height: 34px;
+    padding: 0 20px;
+    background-color: #ffffff;
+    border: 2px solid #5a5d7a;
+    border-radius: 10%;
+    width: 95px;
+    height: 34px;
+}
+
+
+/* cls 17 practice ends */
+/* wall starts */
+#wall{
+    height: 550px;
+    background: url(../images/wall.jpg) no-repeat center / cover;
+    position: relative;
+    z-index: 5;
+    margin-top: 100px;
+}
+#wall::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0,.7);
+    z-index: -1;
+}
+
+#wall .wall{
+    height: 100%;
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#wall .wall .wall-text{
+   width: 800px;
+   height: 220px;
+   background-color: #f1f1f1;
+    margin-top: 50px;
+    position: relative;
+}
+
+#wall .wall .wall-text::before{
+    content: '';
+    height: 40px;
+    width: 40px;
+    background-color: #f1f1f1;
+    position: absolute;
+    left: 380px;
+    bottom: -20px;
+    transform: rotate(45deg);
+}
+
+#wall .wall .circle{
+    width: 470px;
+    height: 150px;
+   
+    display: flex;
+    justify-content: space-between;
+}
+
+#wall .wall .circle .cir-1{
+   height: 100px;
+   width: 100px;
+   background-color: #c8ced8;
+   border-radius: 50%;
+   margin-top: 30px;
+}
+
+#wall .wall .circle .cir-2{
+    height: 150px;
+    width: 150px;
+    background-color: #bec0c4;
+    border-radius: 50%;
+}
+
+#wall .wall .circle .cir-3{
+    height: 100px;
+    width: 100px;
+    background-color: #c6cbd4;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+
+/* wall ends */
